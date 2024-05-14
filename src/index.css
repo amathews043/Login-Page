@@ -1,0 +1,93 @@
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  padding-left: 0;
+  max-width: 500px;
+  margin: auto;
+  background-color: #FCEFDD;
+  font-family: "Stint Ultra Expanded", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #011E32;
+}
+
+h1{
+  font-family: "Holtwood One SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#small-box {
+  background-color:#FA9F80;
+  height: 26em;
+  width: 100%;
+  display: flex; 
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+  border-radius: 50px;
+
+}
+
+
+button {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  font-weight: 700;
+  padding: 9px 17px;
+  border-radius: 20px;
+  line-height: 24px;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  background-color: #011E32;
+  color: #FA9F80
+}
+
+.sign-in-button{
+  margin-top: 3rem;
+  margin-right: 4.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+input {
+  width: 10rem;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+button:focus {
+  outline: none;
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side,#7591B5 90%,#0000);
+  background: 
+    var(--_g) 0%   50%,
+    var(--_g) 50%  50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 50%;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+    20%{background-position:0%   0%, 50%  50%,100%  50%}
+    40%{background-position:0% 100%, 50%   0%,100%  50%}
+    60%{background-position:0%  50%, 50% 100%,100%   0%}
+    80%{background-position:0%  50%, 50%  50%,100% 100%}
+}
+
+
