@@ -3,33 +3,25 @@ import PageLayout from "./PageLayout";
 import Signin from "./Signin";
 import Confirmation from "./Confirmation"
 import Loading from "./Loading"
+import Page from "./Page";
 
-const SignInContext = React.createContext();
+const PageContext = React.createContext();
 
 export default function App() {
 
   const [page, setPage] = useState("signin");
+  const pageContext = {
+    page,
+    setPage,
+  }
 
   return (
     <>
-      <PageLayout>
-        <h1 className="header"> Welcome</h1>
-        <p> Please log in to view the beach</p>
-        {page === "signin" && (
-          <SignInContext.Provider value={setPage}>
-            <Signin />
-          </SignInContext.Provider>
-
-        )}
-        {page === "loading" && (
-          <Loading/>
-        )}
-        {page === "confirmation" && (
-          <Confirmation />
-        )}
-      </PageLayout>
+      <PageContext.Provider value={pageContext}>
+        <Page />
+      </PageContext.Provider>
     </>
   )
 }
 
-export { SignInContext }
+export { PageContext }

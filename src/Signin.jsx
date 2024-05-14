@@ -1,13 +1,13 @@
 import { useContext } from "react"
-import { SignInContext } from "./App"
+import { PageContext } from "./App"
 
 export default function Signin() {
 
-    const setPage = useContext(SignInContext)
+    const pageContext = useContext(PageContext)
     const click = () => {
-        setPage("loading")
+        pageContext.setPage("loading")
         setTimeout(() => {
-            setPage("confirmation")
+            pageContext.setPage("confirmation")
         }, 2000)
     }
 
