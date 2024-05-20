@@ -13,6 +13,7 @@ export default function Signin() {
 
     return (
         <div>
+            <p> Please log in to view the beach</p>
             <form className="form">
                 <div>
                     <label> Email: </label>

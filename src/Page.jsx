@@ -11,7 +11,6 @@ export default function Page() {
         <>
             <PageLayout>
                 <h1 className="header"> Welcome</h1>
-                <p> Please log in to view the beach</p>
                 {pageContext.page === "signin" && (
                     <Signin />
 
